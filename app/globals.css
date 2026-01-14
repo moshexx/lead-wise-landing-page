@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply antialiased;
+  }
+
+  /* Hebrew font support */
+  [dir='rtl'] body {
+    font-family: system-ui, -apple-system, 'Segoe UI', 'Heebo', 'Rubik', sans-serif;
+  }
+
+  [dir='ltr'] body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+@layer utilities {
+  /* RTL utilities */
+  .start-0 {
+    inset-inline-start: 0;
+  }
+
+  .start-4 {
+    inset-inline-start: 1rem;
+  }
+
+  .start-6 {
+    inset-inline-start: 1.5rem;
+  }
+
+  .start-10 {
+    inset-inline-start: 2.5rem;
+  }
+
+  .start-20 {
+    inset-inline-start: 5rem;
+  }
+
+  .start-1\/2 {
+    inset-inline-start: 50%;
+  }
+
+  .end-4 {
+    inset-inline-end: 1rem;
+  }
+
+  .end-6 {
+    inset-inline-end: 1.5rem;
+  }
+
+  .end-10 {
+    inset-inline-end: 2.5rem;
+  }
+
+  .end-20 {
+    inset-inline-end: 5rem;
+  }
+
+  /* Gradient utilities */
+  .bg-gradient-to-e {
+    background-image: linear-gradient(to inline-end, var(--tw-gradient-stops));
+  }
+}

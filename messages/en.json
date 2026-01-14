@@ -1,0 +1,460 @@
+{
+  "site": {
+    "title": "LeadWise - Smart Lead Management System",
+    "description": "Turn every lead into a meeting with an automated lead management system. Instant WhatsApp response, smart follow-up, and automatic calendar sync."
+  },
+  "nav": {
+    "cta": "Schedule Your Free Strategy Session"
+  },
+  "hero": {
+    "title": "Turn Every Lead Into a Booked Meeting",
+    "subtitle": "Instant WhatsApp response + Smart follow-up + Automatic calendar sync",
+    "cta": "Schedule Your Free Strategy Session"
+  },
+  "problem": {
+    "title": "This isn't a marketing problem. It's a handling problem.",
+    "story": "The campaign runs, leads sign up, but there's no one to answer them within seconds. Follow-up falls through. Clients book with competitors.",
+    "impact": "Time = Money. Unmanaged lead = deal going to someone else.",
+    "painPoints": [
+      "No one answers leads within seconds",
+      "Follow-up falls through the cracks",
+      "Clients book with competitors"
+    ]
+  },
+  "promise": {
+    "title": "Not a system. A machine.",
+    "subtitle": "For converting leads to calendar meetings - within 14 days",
+    "benefits": [
+      {
+        "title": "Instant WhatsApp Response",
+        "description": "Every lead gets an automatic response within seconds"
+      },
+      {
+        "title": "Smart, Non-Pushy Follow-up",
+        "description": "Automatic reminders that arrive at the right time"
+      },
+      {
+        "title": "Calendar Sync + Automatic Reminders",
+        "description": "Every meeting synced with automatic reminders"
+      },
+      {
+        "title": "Full Data Control",
+        "description": "Clear dashboard with all the information you need"
+      }
+    ]
+  },
+  "howItWorks": {
+    "title": "How does it work?",
+    "subtitle": "Simple three-step process",
+    "steps": [
+      {
+        "number": "1",
+        "title": "Lead Signs Up",
+        "description": "Instant WhatsApp sent automatically"
+      },
+      {
+        "number": "2",
+        "title": "Didn't Book a Meeting?",
+        "description": "Smart reminders go out automatically"
+      },
+      {
+        "number": "3",
+        "title": "Booked a Meeting?",
+        "description": "Gets confirmation + reminder. Everything synced"
+      }
+    ]
+  },
+  "whatYouGet": {
+    "title": "What do you get?",
+    "subtitle": "Everything done FOR you - no work on your end",
+    "items": [
+      {
+        "title": "Customized Strategy Session",
+        "description": "We'll build the exact process for your business together"
+      },
+      {
+        "title": "Human Conversation Scripts",
+        "description": "Scripts that feel human, not robotic"
+      },
+      {
+        "title": "Full Technical Integration",
+        "description": "WhatsApp, calendar, leads - all connected and working"
+      },
+      {
+        "title": "Clear Dashboard (CRM)",
+        "description": "See exactly what's happening with every lead"
+      },
+      {
+        "title": "Training for Easy Control",
+        "description": "You'll know how to manage everything yourself easily"
+      }
+    ]
+  },
+  "socialProof": {
+    "title": "Clients Share",
+    "subtitle": "They're already using the system. Now it's your turn.",
+    "testimonials": [
+      {
+        "name": "Yossi C.",
+        "title": "Founder",
+        "business": "Digital Marketing Agency (12-person team)",
+        "quote": "Before LeadWise, we were losing 60% of our leads to slow response times. Now every lead gets instant attention, and our show-up rate jumped from 45% to 72%.",
+        "result": "27% increase in meeting attendance rate",
+        "metric": "From 45% to 72% show-up rate",
+        "timeframe": "Within 30 days"
+      },
+      {
+        "name": "Sarah L.",
+        "title": "Business Consultant",
+        "business": "Strategic Business Consulting",
+        "quote": "It just works. I'm no longer chasing leads - the system does it for me. Saved 10 hours a week and I'm closing more deals.",
+        "result": "Saved 10 hours weekly",
+        "metric": "40 hours/month back to client work",
+        "timeframe": "From week one"
+      },
+      {
+        "name": "David M.",
+        "title": "CEO",
+        "business": "Mortgage Consulting Office",
+        "quote": "Best thing I've done for my business. Before - 8 meetings/month. After - 16 meetings. Same lead volume, 2x conversion.",
+        "result": "Doubled monthly meeting count",
+        "metric": "From 8 to 16 meetings/month",
+        "timeframe": "Within two months"
+      }
+    ]
+  },
+  "roiCalculator": {
+    "title": "How much money are you leaving on the table?",
+    "subtitle": "Calculate how much money the system could return to you",
+    "instruction": "Adjust the values to see your personalized calculation",
+    "leadValue": "Average Lead Value ($)",
+    "leadsPerMonth": "Leads Per Month",
+    "currentConversion": "Current Conversion Rate (%)",
+    "calculate": "Calculate",
+    "breakdown": {
+      "title": "What this means in practice:",
+      "yearly": "${amount}/year (additional revenue)",
+      "payback": "Pays back your investment ($799) in {days} days",
+      "socialProof": "Just like David - who doubled from 8 to 16 meetings"
+    },
+    "painPoint": {
+      "title": "⚠️ What you're losing right now",
+      "subtitle": "Without the system, this money is being lost:",
+      "perMonth": "next month",
+      "perYear": "this year"
+    },
+    "urgency": {
+      "title": "⏰ Bonus ending soon",
+      "timerLabel": "Time remaining:",
+      "lossRate": "Every hour that passes =",
+      "hourlyLoss": "${amount} lost",
+      "cta": "Book a meeting now and stop losing money"
+    },
+    "result": "The system could return you",
+    "perMonth": "per month",
+    "note": "* Estimated calculation based on 20% lead conversion improvement (industry average)",
+    "tooltip": {
+      "title": "What is this calculation based on?",
+      "point1": "Harvard Business Review studies show 35-50% of leads are lost due to slow response times",
+      "point2": "Lead automation systems improve conversion by 10-30% on average (sources: Salesforce, HubSpot)",
+      "point3": "The 20% improvement is the conservative end of the range - most businesses see better results",
+      "source": "Sources: Harvard Business Review, Salesforce Research, HubSpot State of Marketing Report 2024"
+    }
+  },
+  "pricing": {
+    "title": "One-Time Investment: $799",
+    "subtitle": "Less than the cost of one lost deal",
+    "bonus": "Early Bird Bonus: Free month of technical support!",
+    "timer": {
+      "label": "Offer ends in"
+    },
+    "urgency": {
+      "slotsRemaining": "Only {count} setup slots remaining this month",
+      "bonusEnding": "Bonus ends {date}",
+      "daysRemaining": "{count} days left",
+      "limitedCapacity": "We limit onboarding to ensure quality for every client"
+    },
+    "comparison": {
+      "title": "Compare to alternatives:",
+      "va": "Virtual Assistant: $900/month = $10,800/year",
+      "agency": "Marketing Agency: $2,000/month = $24,000/year",
+      "lost": "Lost opportunities from slow follow-up: Priceless",
+      "leadwise": "LeadWise: $799 once. Works forever."
+    },
+    "includes": "What's included:",
+    "features": [
+      "Full technical integration (the hard part, done for you)",
+      "WhatsApp automation + Calendar sync (instant ROI)",
+      "Personalized strategy session (custom to your business)",
+      "Human conversation scripts (not robotic)",
+      "CRM dashboard setup (see every lead)",
+      "Month of technical support (we've got your back)"
+    ],
+    "payment": "Pay in full: $799 or 3 payments of $285",
+    "social": "Join consultants and service providers already doubling their meetings with the system",
+    "cta": "Schedule Your Free Strategy Session"
+  },
+  "riskReversal": {
+    "title": "Important Clarification",
+    "points": [
+      "No commitment to specific financial results. Every business operates in a different market, with different leads.",
+      "The system is a tool - not magic. But when used correctly - it produces results."
+    ]
+  },
+  "finalCta": {
+    "title": "Meetings Won't Schedule Themselves",
+    "subtitle": "Let's check together if the system fits your business",
+    "cta": "Schedule Your Free Strategy Session"
+  },
+  "footer": {
+    "brand": "LeadWise",
+    "tagline": "The system that turns leads into meetings",
+    "contact": "Contact",
+    "whatsapp": "WhatsApp",
+    "email": "Email",
+    "links": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service"
+    },
+    "copyright": "© 2025 LeadWise. All rights reserved."
+  },
+  "contactForm": {
+    "title": "Let's Schedule a Meeting",
+    "subtitle": "Fill in your details and you'll be redirected to schedule your meeting",
+    "close": "Close",
+    "steps": {
+      "nameQuestion": "What should we call you?",
+      "emailQuestion": "What's your email?",
+      "phoneQuestion": "Where should we WhatsApp you?"
+    },
+    "fields": {
+      "name": "Full Name",
+      "phone": "Phone",
+      "email": "Email Address"
+    },
+    "placeholders": {
+      "name": "Your name",
+      "phone": "+1-XXX-XXX-XXXX",
+      "email": "example@email.com"
+    },
+    "validation": {
+      "nameRequired": "Please enter your name",
+      "nameMinLength": "Name must be at least 2 characters",
+      "phoneRequired": "Please enter your phone number",
+      "phoneInvalid": "Invalid phone number",
+      "emailRequired": "Please enter your email",
+      "emailInvalid": "Invalid email address"
+    },
+    "submit": "Schedule Meeting",
+    "next": "Continue",
+    "back": "Back",
+    "submitting": "Booking your time slot...",
+    "error": "An error occurred. Please try again.",
+    "privacyNotice": "🔒 Your info is safe with us. We never sell or share your data.",
+    "stepProgress": "Step {current} of {total}"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last Updated",
+    "intro": {
+      "title": "Introduction",
+      "content": "At LeadWise, we are committed to protecting your privacy and personal information. This Privacy Policy explains how we collect, use, and protect your information when you use our services."
+    },
+    "dataCollection": {
+      "title": "Information We Collect",
+      "content": "We may collect the following types of information:",
+      "types": [
+        "Personal Information: Name, email address, phone number, and other contact details you provide.",
+        "Business Information: Company name, industry, and information about your business needs.",
+        "Usage Data: Information about how you use our system, including access patterns and activities.",
+        "Technical Data: IP address, browser type, operating system, and other technical data."
+      ]
+    },
+    "dataUsage": {
+      "title": "How We Use Your Information",
+      "content": "We use the information we collect for the following purposes:",
+      "purposes": [
+        "To provide and improve our services.",
+        "To communicate with you regarding services, updates, and relevant information.",
+        "To manage your account and subscriptions.",
+        "To analyze and improve user experience.",
+        "To send marketing materials (only with your consent).",
+        "To comply with legal requirements and protect our rights."
+      ]
+    },
+    "dataSharing": {
+      "title": "Sharing Information with Third Parties",
+      "content": "We do not sell your personal information. We may share information with:",
+      "parties": [
+        "Service Providers: Companies that help us operate our services (hosting, data analysis, payment services).",
+        "Business Partners: Only when you have given explicit consent.",
+        "Legal Requirements: When required by law or to protect our rights."
+      ],
+      "note": "Any third party we work with is obligated to protect your information according to high standards."
+    },
+    "dataSecurity": {
+      "title": "Data Security",
+      "content": "We implement appropriate technical and organizational security measures to protect your personal information from unauthorized access, misuse, or loss. However, no method of internet transmission or electronic storage is 100% secure."
+    },
+    "cookies": {
+      "title": "Cookies",
+      "content": "We use cookies and similar technologies to improve user experience, analyze site usage, and personalize content. You can control cookies through your browser settings."
+    },
+    "userRights": {
+      "title": "Your Rights",
+      "content": "You have the following rights regarding your personal information:",
+      "rights": [
+        "Access: Request a copy of the personal information we hold about you.",
+        "Correction: Request to correct inaccurate or incomplete information.",
+        "Deletion: Request deletion of your personal information (subject to legal limitations).",
+        "Restriction: Request to restrict the use of your information.",
+        "Objection: Object to processing your information for certain purposes.",
+        "Portability: Receive your information in a structured, commonly used format."
+      ],
+      "contact": "To exercise your rights, please contact us."
+    },
+    "policyChanges": {
+      "title": "Changes to Privacy Policy",
+      "content": "We reserve the right to update this Privacy Policy from time to time. Material changes will be posted on our website and/or sent to you via email. Continued use of services after changes are posted constitutes acceptance of the changes."
+    },
+    "contact": {
+      "title": "Contact Us",
+      "content": "If you have questions or concerns about this Privacy Policy, please contact us:",
+      "methods": "Email, WhatsApp, or through the contact form on our website."
+    }
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "lastUpdated": "Last Updated",
+    "intro": {
+      "title": "Acceptance of Terms",
+      "content": "Welcome to LeadWise. By accessing and using our services, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our services."
+    },
+    "serviceUse": {
+      "title": "Use of Service",
+      "content": "You agree to use our services only for lawful purposes and in accordance with the following:",
+      "rules": [
+        "Do not use the services in any way that could damage, disable, overburden, or impair the functionality of the services.",
+        "Do not infringe upon the intellectual property rights of LeadWise or third parties.",
+        "Do not upload or transmit viruses, malicious code, or any other harmful software.",
+        "Do not collect or store personal information of other users without their consent.",
+        "Do not impersonate any person or entity or falsely represent your relationship with us."
+      ]
+    },
+    "accountRegistration": {
+      "title": "Registration and Account",
+      "content": "To use some of our services, you must create an account. You agree to:",
+      "responsibilities": [
+        "Provide accurate, current, and complete information during the registration process.",
+        "Maintain the security of your password and notify us immediately of any unauthorized use.",
+        "Accept full responsibility for all activities that occur under your account.",
+        "Update your account information to keep it accurate and current."
+      ]
+    },
+    "paymentTerms": {
+      "title": "Payments and Refunds",
+      "content": "Our services are provided for a one-time payment or recurring subscription:",
+      "terms": [
+        "All payments are processed securely through third-party payment providers.",
+        "Prices are subject to change with advance notice.",
+        "Refunds will be processed according to our refund policy and subject to conditions.",
+        "You are responsible for all taxes applicable to your purchase."
+      ],
+      "refundPolicy": "Refund Policy: Please contact us for details on our refund policy."
+    },
+    "intellectualProperty": {
+      "title": "Intellectual Property",
+      "content": "All content, features, and functionality of our services (including but not limited to text, graphics, logos, icons, images, audio/video clips, downloads, interfaces, and software) are the exclusive property of LeadWise and protected by international intellectual property laws.",
+      "restrictions": "You may not:",
+      "prohibitions": [
+        "Copy, modify, distribute, sell, or lease any part of our services.",
+        "Reverse engineer, decompile, or attempt to extract the source code of the services.",
+        "Remove any copyright or other proprietary notices."
+      ]
+    },
+    "disclaimer": {
+      "title": "Limitation of Liability",
+      "content": "The services are provided \"as is\" and \"as available\" without warranty of any kind, express or implied. LeadWise makes no commitment to specific results or particular business improvements.",
+      "noWarranty": "We do not guarantee that:",
+      "limitations": [
+        "The services will operate uninterrupted, timely, or error-free.",
+        "Defects will be corrected.",
+        "The services or our servers are free of viruses or other harmful components.",
+        "The results you obtain from using the services will be accurate or reliable."
+      ],
+      "limitationOfLiability": "In no event shall LeadWise, its owners, employees, or partners be liable for any direct, indirect, incidental, special, or consequential damages arising from use or inability to use the services."
+    },
+    "indemnification": {
+      "title": "Indemnification",
+      "content": "You agree to indemnify, defend, and hold harmless LeadWise and its officers, directors, employees, and agents from any claims, damages, obligations, losses, costs, or expenses (including attorney fees) arising from:",
+      "scenarios": [
+        "Your use of the services.",
+        "Violation of these Terms of Service.",
+        "Violation of third-party rights, including privacy or intellectual property rights.",
+        "Any claim that your content caused damage to a third party."
+      ]
+    },
+    "termination": {
+      "title": "Service Termination",
+      "content": "We reserve the right to suspend or terminate your access to the services at any time, without prior notice, if:",
+      "reasons": [
+        "You violated these Terms of Service.",
+        "You used the services in a manner harmful to us or other users.",
+        "You refused to pay for paid services.",
+        "We are permanently closing the services."
+      ],
+      "effect": "Upon account termination, your right to use the services will cease immediately."
+    },
+    "changesToTerms": {
+      "title": "Changes to Terms of Service",
+      "content": "We reserve the right to update these Terms of Service at any time. Changes will be posted on this page and take effect immediately upon posting. Continued use of services after changes constitutes acceptance of the new terms."
+    },
+    "governingLaw": {
+      "title": "Governing Law and Jurisdiction",
+      "content": "These Terms of Service are governed by and construed in accordance with the laws of the State of Israel. Any dispute arising from these terms will be heard in the competent courts of Israel."
+    },
+    "contact": {
+      "title": "Contact Us",
+      "content": "If you have questions or concerns about these Terms of Service, please contact us:",
+      "methods": "Email, WhatsApp, or through the contact form on our website."
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Everything you wanted to know about LeadWise",
+    "items": [
+      {
+        "question": "How long does it take to set up the system?",
+        "answer": "The setup process takes between 7-14 business days. This includes a strategy session, script writing, technical integration, CRM setup, and comprehensive training."
+      },
+      {
+        "question": "What do I need for the system to work?",
+        "answer": "You need a business WhatsApp number, a Cal.com or Google Calendar account, and of course - leads coming to your website or forms. We handle everything else for you."
+      },
+      {
+        "question": "Is there a monthly cost?",
+        "answer": "The initial investment is a one-time payment of $799. After that, there's a small monthly fee for technical tools (around $50-80/month) - depending on usage volume."
+      },
+      {
+        "question": "Is the system suitable for any type of business?",
+        "answer": "The system is especially suitable for meeting-based businesses - consultants, service firms, salespeople, agents, and more. If you're based on calls or meetings with clients - this system is perfect for you."
+      },
+      {
+        "question": "What if I'm not satisfied?",
+        "answer": "In the first meeting, we check compatibility. If the system doesn't fit you - we simply don't proceed. But if we start working - we're committed to your success."
+      },
+      {
+        "question": "Do I need technical knowledge?",
+        "answer": "Not at all! The system is installed for you from A to Z. You receive simple and convenient training, and all routine operation is simple and easy."
+      },
+      {
+        "question": "How many leads do I need per month?",
+        "answer": "The system can handle any number of leads - from 10 leads per month to hundreds. It's built according to your volume."
+      },
+      {
+        "question": "I have more questions, how do I contact you?",
+        "answer": "The easiest way - click the 'Schedule Your Free Strategy Session' button and let's schedule a short call. We'll answer all questions and check together if the system fits you."
+      }
+    ]
+  }
+}
