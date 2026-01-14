@@ -5,7 +5,8 @@ import { useForm } from 'react-hook-form';
 import { useTranslations } from 'next-intl';
 import { X, Phone, Mail, User, Loader2, ArrowRight, ArrowLeft } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { CAL_COM_LINK, WEBHOOK_URL } from '@/lib/constants';
+import { getCalApi } from '@calcom/embed-react';
+import { WEBHOOK_URL } from '@/lib/constants';
 import { logger } from '@/lib/logger';
 import { fetchWithTimeout } from '@/lib/fetchWithTimeout';
 
@@ -82,21 +83,23 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
         throw new Error('Failed to send data to webhook');
       }
 
-      // Build Cal.com URL with parameters
-      const calUrl = new URL(CAL_COM_LINK);
-      calUrl.searchParams.set('name', data.name);
-      calUrl.searchParams.set('email', data.email);
-      calUrl.searchParams.set('phone', data.phone);
-      calUrl.searchParams.set('utm_source', 'landing_page');
-      calUrl.searchParams.set('utm_medium', 'contact_form');
+      // Open Cal.com booking modal with pre-filled data
+      const cal = await getCalApi();
+      cal('modal', {
+        calLink: 'simpliflow-office-e6a9co/leadflow',
+        config: {
+          name: data.name,
+          email: data.email,
+          phone: data.phone,
+          utm_source: 'landing_page',
+          utm_medium: 'contact_form',
+        }
+      });
 
       // Reset form and close modal
       reset();
       setCurrentStep(1);
       onClose();
-
-      // Redirect to Cal.com
-      window.open(calUrl.toString(), '_blank', 'noopener,noreferrer');
     } catch (err) {
       logger.error('Error submitting form:', err);
       setError(t('error'));

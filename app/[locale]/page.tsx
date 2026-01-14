@@ -1,3 +1,4 @@
+import { setRequestLocale } from 'next-intl/server';
 import HeroSection from '@/components/sections/HeroSection';
 import ProblemSection from '@/components/sections/ProblemSection';
 import PromiseSection from '@/components/sections/PromiseSection';
@@ -12,7 +13,10 @@ import FinalCTASection from '@/components/sections/FinalCTASection';
 import Footer from '@/components/sections/Footer';
 import StickyFloatingCTA from '@/components/ui/StickyFloatingCTA';
 
-export default function HomePage() {
+export default function HomePage({ params }: { params: { locale: string } }) {
+  // Enable static rendering
+  setRequestLocale(params.locale);
+
   return (
     <main>
       {/* Sticky Floating CTA (mobile only) */}
