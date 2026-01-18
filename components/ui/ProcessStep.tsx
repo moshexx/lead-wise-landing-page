@@ -24,7 +24,7 @@ export default function ProcessStep({
         className={cn(
           'relative z-10 flex items-center justify-center',
           'w-16 h-16 md:w-20 md:h-20',
-          'rounded-full bg-gradient-primary text-white',
+          'rounded-full bg-primary text-white',
           'text-2xl md:text-3xl font-bold',
           'shadow-lg'
         )}
@@ -34,7 +34,7 @@ export default function ProcessStep({
 
       {/* Connecting Line (except for last step) */}
       {!isLast && (
-        <div className="absolute top-8 md:top-10 start-1/2 w-full h-0.5 bg-gradient-to-e from-accent-purple to-accent-light hidden md:block" />
+        <div className="absolute top-8 md:top-10 start-1/2 w-full h-0.5 bg-primary hidden md:block" />
       )}
 
       {/* Content */}

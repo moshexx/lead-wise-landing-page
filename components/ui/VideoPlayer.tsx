@@ -117,7 +117,7 @@ export default function VideoPlayer({ className = '', autoplayDelay = 0 }: Video
                 className="absolute inset-0 flex items-center justify-center"
                 aria-label="Play video"
               >
-                <div className={`bg-gradient-to-r from-blue-600 to-purple-600 rounded-full p-6 shadow-2xl transform group-hover:scale-110 transition-all ${
+                <div className={`bg-primary rounded-full p-6 shadow-2xl transform group-hover:scale-110 transition-all ${
                   shouldPulse ? 'animate-pulse scale-110' : ''
                 }`}>
                   <Play className="w-12 h-12 text-white fill-white ms-1" />

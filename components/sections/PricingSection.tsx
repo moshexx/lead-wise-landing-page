@@ -46,7 +46,7 @@ export default function PricingSection() {
   const timerDeadline = getEndOfMonth();
 
   return (
-    <section className="py-16 md:py-24 bg-gradient-hero text-white">
+    <section className="py-16 md:py-24 bg-primary-dark text-white">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           {/* Bonus Badge with Urgency */}
@@ -99,7 +99,7 @@ export default function PricingSection() {
             className="bg-white text-gray-900 rounded-2xl shadow-2xl overflow-hidden"
           >
             {/* Price Header */}
-            <div className="bg-gradient-primary text-white p-8 text-center">
+            <div className="bg-primary text-white p-8 text-center">
               <h2 className="text-2xl md:text-3xl font-bold mb-2">
                 {t('title').replace('2,930 ₪', `${price} ${currency}`).replace('$799', `${currency}${price}`)}
               </h2>
@@ -180,7 +180,7 @@ export default function PricingSection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.3 }}
-                  className="mb-8 p-6 bg-gradient-primary rounded-xl"
+                  className="mb-8 p-6 bg-primary rounded-xl"
                 >
                   <CountdownTimer
                     deadline={timerDeadline}

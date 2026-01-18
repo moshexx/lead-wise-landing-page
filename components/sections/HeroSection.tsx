@@ -11,7 +11,7 @@ export default function HeroSection() {
   const t = useTranslations('hero');
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-hero overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center bg-primary-dark overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 start-20 w-64 h-64 bg-accent-purple rounded-full blur-3xl" />

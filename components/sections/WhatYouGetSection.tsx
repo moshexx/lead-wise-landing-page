@@ -46,8 +46,8 @@ export default function WhatYouGetSection() {
                 className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-all w-full text-center"
               >
                 <div className="mb-4 flex justify-center">
-                  <div className="inline-flex p-3 bg-purple-100 rounded-lg">
-                    <item.icon className="w-8 h-8 text-purple-600" />
+                  <div className="inline-flex">
+                    <item.icon className="w-8 h-8 text-primary" />
                   </div>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">

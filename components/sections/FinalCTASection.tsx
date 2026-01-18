@@ -9,7 +9,7 @@ export default function FinalCTASection() {
   const t = useTranslations('finalCta');
 
   return (
-    <section className="py-16 md:py-24 bg-gradient-hero text-white relative overflow-hidden">
+    <section className="py-16 md:py-24 bg-primary-dark text-white relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-10 start-10 w-64 h-64 bg-accent-purple rounded-full blur-3xl" />

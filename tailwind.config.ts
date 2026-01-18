@@ -19,8 +19,8 @@ const config: Config = {
         },
       },
       backgroundImage: {
-        'gradient-primary': 'linear-gradient(135deg, #7C3AED 0%, #A855F7 100%)',
-        'gradient-hero': 'linear-gradient(135deg, #0F172A 0%, #1E40AF 100%)',
+        'gradient-primary': '#1E40AF',
+        'gradient-hero': '#0F172A',
       },
     },
   },

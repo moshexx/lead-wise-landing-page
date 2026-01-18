@@ -175,7 +175,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                 </div>
                 <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
                   <motion.div
-                    className="h-full bg-gradient-to-r from-blue-600 to-purple-600"
+                    className="h-full bg-primary"
                     initial={{ width: '33.33%' }}
                     animate={{ width: `${(currentStep / totalSteps) * 100}%` }}
                     transition={{ duration: 0.3 }}
@@ -245,7 +245,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                       <button
                         type="button"
                         onClick={handleNextStep}
-                        className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold py-4 px-6 rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all transform hover:scale-[1.02] flex items-center justify-center gap-2"
+                        className="w-full bg-primary text-white font-bold py-4 px-6 rounded-xl hover:bg-primary-dark transition-all transform hover:scale-[1.02] flex items-center justify-center gap-2"
                       >
                         {t('next')}
                         <ArrowRight className="w-5 h-5" />
@@ -321,7 +321,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                         <button
                           type="button"
                           onClick={handleNextStep}
-                          className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold py-4 px-6 rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all transform hover:scale-[1.02] flex items-center justify-center gap-2"
+                          className="flex-1 bg-primary text-white font-bold py-4 px-6 rounded-xl hover:bg-primary-dark transition-all transform hover:scale-[1.02] flex items-center justify-center gap-2"
                         >
                           {t('next')}
                           <ArrowRight className="w-5 h-5" />
@@ -410,7 +410,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                         <button
                           type="submit"
                           disabled={isSubmitting}
-                          className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold py-4 px-6 rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all transform hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 flex items-center justify-center gap-2"
+                          className="flex-1 bg-primary text-white font-bold py-4 px-6 rounded-xl hover:bg-primary-dark transition-all transform hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 flex items-center justify-center gap-2"
                         >
                           {isSubmitting ? (
                             <>

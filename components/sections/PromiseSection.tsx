@@ -46,7 +46,7 @@ export default function PromiseSection() {
                 className="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-shadow"
               >
                 <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 p-3 bg-gradient-primary rounded-lg">
+                  <div className="flex-shrink-0 p-3 bg-primary rounded-lg">
                     <benefit.icon className="w-6 h-6 md:w-8 md:h-8 text-white" />
                   </div>
                   <div>
