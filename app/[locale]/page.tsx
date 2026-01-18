@@ -1,5 +1,5 @@
 import { setRequestLocale } from 'next-intl/server';
-import HeroSection from '@/components/sections/HeroSection';
+import HeroSection, { VideoSection } from '@/components/sections/HeroSection';
 import ProblemSection from '@/components/sections/ProblemSection';
 import PromiseSection from '@/components/sections/PromiseSection';
 import HowItWorksSection from '@/components/sections/HowItWorksSection';
@@ -24,6 +24,7 @@ export default function HomePage({ params }: { params: { locale: string } }) {
 
       {/* Page Sections (in exact order per spec) */}
       <HeroSection />
+      <VideoSection />
       <ProblemSection />
       <PromiseSection />
       <HowItWorksSection />

@@ -157,14 +157,14 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
               {/* Close Button */}
               <button
                 onClick={handleModalClose}
-                className="absolute top-4 end-4 p-2 rounded-full hover:bg-gray-100 transition-colors z-10"
+                className="absolute top-3 start-3 p-2 rounded-full hover:bg-gray-100 transition-colors z-10"
                 aria-label={t('close')}
               >
                 <X className="w-5 h-5 text-gray-500" />
               </button>
 
               {/* Progress Bar */}
-              <div className="mb-6">
+              <div className="mb-6 mt-8">
                 <div className="flex justify-between items-center mb-2">
                   <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
                     {t('title')}

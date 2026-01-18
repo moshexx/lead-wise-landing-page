@@ -3,18 +3,19 @@
 import { useTranslations } from 'next-intl';
 import { AlertCircle, Clock, UserX } from 'lucide-react';
 import { motion } from 'framer-motion';
+import BookDemoButton from '@/components/ui/BookDemoButton';
 
 export default function ProblemSection() {
   const t = useTranslations('problem');
 
   const painPoints = [
-    { icon: Clock, text: t('painPoints.0') },
-    { icon: AlertCircle, text: t('painPoints.1') },
-    { icon: UserX, text: t('painPoints.2') },
+    { icon: Clock, titleKey: 'painPoints.0.title', descKey: 'painPoints.0.description' },
+    { icon: AlertCircle, titleKey: 'painPoints.1.title', descKey: 'painPoints.1.description' },
+    { icon: UserX, titleKey: 'painPoints.2.title', descKey: 'painPoints.2.description' },
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-white">
+    <section className="py-16 md:py-24 bg-gray-100">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           {/* Title */}
@@ -25,7 +26,11 @@ export default function ProblemSection() {
             transition={{ duration: 0.6 }}
             className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 text-center mb-8"
           >
-            {t('title')}
+            {t('title').split('\n').map((line, index) => (
+              <span key={index} className={index === 1 ? 'block text-4xl md:text-5xl lg:text-6xl mt-2' : 'block'}>
+                {line}
+              </span>
+            ))}
           </motion.h2>
 
           {/* Story */}
@@ -39,8 +44,8 @@ export default function ProblemSection() {
             {t('story')}
           </motion.p>
 
-          {/* Pain Points */}
-          <div className="grid md:grid-cols-3 gap-6 mb-12">
+          {/* Pain Points - Stacked cards with white background */}
+          <div className="space-y-4 mb-8">
             {painPoints.map((point, index) => (
               <motion.div
                 key={index}
@@ -48,23 +53,37 @@ export default function ProblemSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
-                className="bg-red-50 border-2 border-red-200 rounded-xl p-6 text-center"
+                className="bg-white rounded-2xl p-6 shadow-sm"
               >
-                <point.icon className="w-10 h-10 md:w-12 md:h-12 text-red-600 mx-auto mb-4" />
-                <p className="text-gray-800 font-medium">{point.text}</p>
+                <div className="flex flex-col items-center text-center">
+                  <point.icon className="w-10 h-10 text-red-500 mb-3" />
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">{t(point.titleKey)}</h3>
+                  <p className="text-gray-600">{t(point.descKey)}</p>
+                </div>
               </motion.div>
             ))}
           </div>
 
-          {/* Impact Statement */}
+          {/* Familiar Question */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-8"
+          >
+            {t('familiar')}
+          </motion.p>
+
+          {/* CTA Button */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="bg-gradient-primary text-white rounded-2xl p-8 text-center"
+            className="flex justify-center"
           >
-            <p className="text-xl md:text-2xl font-bold">{t('impact')}</p>
+            <BookDemoButton variant="hero" className="w-full max-w-md" />
           </motion.div>
         </div>
       </div>

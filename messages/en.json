@@ -12,13 +12,23 @@
     "cta": "Schedule Your Free Strategy Session"
   },
   "problem": {
-    "title": "This isn't a marketing problem. It's a handling problem.",
+    "title": "This isn't a marketing problem.\nIt's a handling problem.",
     "story": "The campaign runs, leads sign up, but there's no one to answer them within seconds. Follow-up falls through. Clients book with competitors.",
-    "impact": "Time = Money. Unmanaged lead = deal going to someone else.",
+    "impact": "Time = Money.\nUnmanaged lead = deal going to someone else.",
+    "familiar": "Sound familiar?",
     "painPoints": [
-      "No one answers leads within seconds",
-      "Follow-up falls through the cracks",
-      "Clients book with competitors"
+      {
+        "title": "Slow Response Time",
+        "description": "Leads leave their details - and by the time you get back to them, they don't remember who you are or why they reached out."
+      },
+      {
+        "title": "No-Shows to Meetings",
+        "description": "Leads schedule a meeting, but on the day itself they simply don't show up."
+      },
+      {
+        "title": "Scheduling Chaos",
+        "description": "Scheduling meetings becomes a ping-pong of messages at inconvenient times, without clear closure."
+      }
     ]
   },
   "promise": {
@@ -86,7 +96,11 @@
       },
       {
         "title": "Training for Easy Control",
-        "description": "You'll know how to manage everything yourself easily"
+        "description": "Even though the system is simple and does everything automatically, we want you to feel in control"
+      },
+      {
+        "title": "Smart Automatic Follow-ups",
+        "description": "Warming reminders before meetings that ensure they actually happen"
       }
     ]
   },

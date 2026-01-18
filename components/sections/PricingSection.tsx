@@ -57,8 +57,7 @@ export default function PricingSection() {
             transition={{ duration: 0.6 }}
             className="flex flex-col items-center gap-3 mb-8"
           >
-            <div className="bg-yellow-400 text-yellow-900 px-6 py-3 rounded-full font-bold text-lg flex items-center gap-2 shadow-lg">
-              <Gift className="w-6 h-6" />
+            <div className="bg-yellow-400 text-yellow-900 px-6 py-3 rounded-full font-bold text-lg shadow-lg text-center whitespace-pre-line">
               {t('bonus')}
             </div>
 

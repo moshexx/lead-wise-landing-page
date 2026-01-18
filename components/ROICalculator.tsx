@@ -11,7 +11,7 @@ export default function ROICalculator() {
   const t = useTranslations('roiCalculator');
   const [leadValue, setLeadValue] = useState<string>('5000');
   const [leadsPerMonth, setLeadsPerMonth] = useState<string>('10');
-  const [userInteracted, setUserInteracted] = useState(false); // Track if user changed any input
+  const [showResult, setShowResult] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const calculateROI = (): number => {
@@ -58,19 +58,6 @@ export default function ROICalculator() {
 
       <p className="text-center text-gray-600 mb-8">{t('subtitle')}</p>
 
-      {/* Instruction - only show before interaction */}
-      {!userInteracted && (
-        <motion.div
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6 text-center"
-        >
-          <p className="text-blue-800 font-medium">
-            {t('instruction')}
-          </p>
-        </motion.div>
-      )}
-
       <div className="space-y-6">
         {/* Lead Value Input */}
         <div>
@@ -86,7 +73,7 @@ export default function ROICalculator() {
             value={leadValue}
             onChange={(e) => {
               setLeadValue(e.target.value);
-              setUserInteracted(true); // Mark that user interacted
+              setShowResult(false);
             }}
             min={ROI_DEFAULTS.minLeadValue}
             max={ROI_DEFAULTS.maxLeadValue}
@@ -109,7 +96,7 @@ export default function ROICalculator() {
             value={leadsPerMonth}
             onChange={(e) => {
               setLeadsPerMonth(e.target.value);
-              setUserInteracted(true); // Mark that user interacted
+              setShowResult(false);
             }}
             min={ROI_DEFAULTS.minLeadsPerMonth}
             max={ROI_DEFAULTS.maxLeadsPerMonth}
@@ -118,53 +105,47 @@ export default function ROICalculator() {
           />
         </div>
 
-        {/* Result - Always visible */}
-        {userInteracted && (
-          <>
-            <motion.div
-              initial={{ scale: 0.95, opacity: 0 }}
+        {/* Calculate Button */}
+        <button
+          type="button"
+          onClick={() => setShowResult(true)}
+          className="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-6 rounded-lg text-center transition-all shadow-lg"
+        >
+          חשב עכשיו
+        </button>
+
+        {/* Result - Show only after clicking calculate */}
+        {showResult && (
+          <motion.div
+            initial={{ scale: 0.95, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.3 }}
+            className="bg-blue-50 border border-blue-200 text-gray-900 rounded-xl p-8 text-center"
+          >
+            <p className="text-lg mb-3 text-blue-800">{t('result')}</p>
+
+            {/* Monthly ROI - Hero number */}
+            <motion.p
+              key={roi}
+              initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.3 }}
-              className="bg-gradient-primary text-white rounded-xl p-8 text-center"
+              transition={{ duration: 0.5, type: 'spring' }}
+              className="text-5xl md:text-6xl font-bold mb-2 text-blue-900"
             >
-              <p className="text-lg mb-3">{t('result')}</p>
-
-              {/* Monthly ROI - Hero number */}
-              <motion.p
-                key={roi}
-                initial={{ scale: 0.8, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                transition={{ duration: 0.5, type: 'spring' }}
-                className="text-5xl md:text-6xl font-bold mb-2"
-              >
-                ₪{roi.toLocaleString('he-IL', {
-                  maximumFractionDigits: 0,
-                })}
-              </motion.p>
-              <p className="text-xl mb-6">{t('perMonth')}</p>
-
-              {/* Yearly ROI - Secondary */}
-              <div className="pt-4 border-t border-white/20">
-                <p className="text-white/80 text-lg">
-                  ₪{yearlyROI.toLocaleString('he-IL', {
-                    maximumFractionDigits: 0,
-                  })} בשנה
-                </p>
-              </div>
-            </motion.div>
+              ₪{roi.toLocaleString('he-IL', {
+                maximumFractionDigits: 0,
+              })}
+            </motion.p>
 
             {/* CTA Button */}
-            <motion.button
+            <button
               type="button"
               onClick={() => setIsModalOpen(true)}
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 }}
-              className="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 px-6 rounded-lg text-center transition-all transform hover:scale-105 shadow-lg mt-6"
+              className="mt-6 bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-lg text-center transition-all shadow-lg"
             >
               {t('cta')}
-            </motion.button>
-          </>
+            </button>
+          </motion.div>
         )}
 
 

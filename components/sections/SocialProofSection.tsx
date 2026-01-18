@@ -1,7 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { Quote, TrendingUp, Clock, Target } from 'lucide-react';
+import { Quote } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function SocialProofSection() {
@@ -45,33 +45,6 @@ export default function SocialProofSection() {
                 <p className="text-gray-700 mb-6 leading-relaxed italic flex-grow">
                   &ldquo;{t(`testimonials.${key}.quote`)}&rdquo;
                 </p>
-
-                {/* Metrics */}
-                <div className="space-y-3 mb-4">
-                  {/* Result Badge */}
-                  <div className="bg-green-50 border border-green-200 rounded-lg p-3 flex items-start gap-2">
-                    <TrendingUp className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                    <p className="text-sm font-medium text-green-800">
-                      {t(`testimonials.${key}.result`)}
-                    </p>
-                  </div>
-
-                  {/* Metric Details */}
-                  <div className="bg-blue-50 border border-blue-200 rounded-lg p-3 flex items-start gap-2">
-                    <Target className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
-                    <p className="text-sm font-medium text-blue-800">
-                      {t(`testimonials.${key}.metric`)}
-                    </p>
-                  </div>
-
-                  {/* Timeframe */}
-                  <div className="bg-purple-50 border border-purple-200 rounded-lg p-3 flex items-start gap-2">
-                    <Clock className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                    <p className="text-sm font-medium text-purple-800">
-                      {t(`testimonials.${key}.timeframe`)}
-                    </p>
-                  </div>
-                </div>
 
                 {/* Author */}
                 <div className="border-t border-gray-100 pt-4">
