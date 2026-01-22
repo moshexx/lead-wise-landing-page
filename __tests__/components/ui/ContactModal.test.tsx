@@ -2,7 +2,7 @@ import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { render, screen, fireEvent, waitFor } from '@/__tests__/utils/testUtils';
 import userEvent from '@testing-library/user-event';
 import ContactModal from '@/components/ui/ContactModal';
-import { mockContactFormData, mockWebhookResponse } from '@/__tests__/utils/mockData';
+import { mockContactFormData, mockWebhookResponse, mockLeadId } from '@/__tests__/utils/mockData';
 
 // Mock @calcom/embed-react
 vi.mock('@calcom/embed-react', () => ({
@@ -179,7 +179,7 @@ describe('ContactModal', () => {
     it('submits data to webhook on form submit', async () => {
       const user = userEvent.setup();
       const { fetchWithTimeout } = await import('@/lib/fetchWithTimeout');
-      (fetchWithTimeout as ReturnType<typeof vi.fn>).mockResolvedValue({ ok: true });
+      (fetchWithTimeout as ReturnType<typeof vi.fn>).mockResolvedValue(mockWebhookResponse);
 
       render(<ContactModal isOpen={true} onClose={mockOnClose} />);
 
@@ -205,7 +205,7 @@ describe('ContactModal', () => {
     it('includes timestamp and source fields in submission', async () => {
       const user = userEvent.setup();
       const { fetchWithTimeout } = await import('@/lib/fetchWithTimeout');
-      (fetchWithTimeout as ReturnType<typeof vi.fn>).mockResolvedValue({ ok: true });
+      (fetchWithTimeout as ReturnType<typeof vi.fn>).mockResolvedValue(mockWebhookResponse);
 
       render(<ContactModal isOpen={true} onClose={mockOnClose} />);
 
@@ -288,7 +288,7 @@ describe('ContactModal', () => {
       const { getCalApi } = await import('@calcom/embed-react');
       const mockCalFn = vi.fn();
       (getCalApi as ReturnType<typeof vi.fn>).mockResolvedValue(mockCalFn);
-      (fetchWithTimeout as ReturnType<typeof vi.fn>).mockResolvedValue({ ok: true });
+      (fetchWithTimeout as ReturnType<typeof vi.fn>).mockResolvedValue(mockWebhookResponse);
 
       render(<ContactModal isOpen={true} onClose={mockOnClose} />);
 
@@ -309,10 +309,40 @@ describe('ContactModal', () => {
       });
     });
 
+    it('passes lead_id from webhook response to Cal.com', async () => {
+      const user = userEvent.setup();
+      const { fetchWithTimeout } = await import('@/lib/fetchWithTimeout');
+      const { getCalApi } = await import('@calcom/embed-react');
+      const mockCalFn = vi.fn();
+      (getCalApi as ReturnType<typeof vi.fn>).mockResolvedValue(mockCalFn);
+      (fetchWithTimeout as ReturnType<typeof vi.fn>).mockResolvedValue(mockWebhookResponse);
+
+      render(<ContactModal isOpen={true} onClose={mockOnClose} />);
+
+      // Fill and submit form
+      await user.type(screen.getByPlaceholderText('placeholders.name'), mockContactFormData.name);
+      await user.click(screen.getByText('next'));
+      await waitFor(() => expect(screen.getByPlaceholderText('placeholders.email')).toBeInTheDocument());
+      await user.type(screen.getByPlaceholderText('placeholders.email'), mockContactFormData.email);
+      await user.click(screen.getAllByText('next')[0]);
+      await waitFor(() => expect(screen.getByPlaceholderText('placeholders.phone')).toBeInTheDocument());
+      await user.type(screen.getByPlaceholderText('placeholders.phone'), mockContactFormData.phone);
+      await user.click(screen.getByText('submit'));
+
+      await waitFor(() => {
+        expect(mockCalFn).toHaveBeenCalledWith('modal', expect.objectContaining({
+          calLink: 'simpliflow-office-e6a9co/leadflow',
+          config: expect.objectContaining({
+            lead_id: mockLeadId,
+          }),
+        }));
+      });
+    });
+
     it('closes modal after successful submission', async () => {
       const user = userEvent.setup();
       const { fetchWithTimeout } = await import('@/lib/fetchWithTimeout');
-      (fetchWithTimeout as ReturnType<typeof vi.fn>).mockResolvedValue({ ok: true });
+      (fetchWithTimeout as ReturnType<typeof vi.fn>).mockResolvedValue(mockWebhookResponse);
 
       render(<ContactModal isOpen={true} onClose={mockOnClose} />);
 

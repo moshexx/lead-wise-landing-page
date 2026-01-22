@@ -7,8 +7,10 @@ export const mockContactFormData = {
 export const mockWebhookResponse = {
   ok: true,
   status: 200,
-  json: async () => ({ success: true }),
+  json: async () => ({ success: true, lead_id: 'test-lead-123' }),
 };
+
+export const mockLeadId = 'test-lead-123';
 
 export const mockROICalculatorInputs = {
   valid: {

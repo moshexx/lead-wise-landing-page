@@ -82,6 +82,10 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
         throw new Error('Failed to send data to webhook');
       }
 
+      // Get lead_id from webhook response
+      const responseData = await webhookResponse.json();
+      const leadId = responseData.lead_id;
+
       // Open Cal.com booking modal with pre-filled data
       const cal = await getCalApi();
       cal('modal', {
@@ -92,6 +96,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
           phone: data.phone,
           utm_source: 'landing_page',
           utm_medium: 'contact_form',
+          lead_id: leadId,
         }
       });
 
