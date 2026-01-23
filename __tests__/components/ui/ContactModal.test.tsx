@@ -2,7 +2,7 @@ import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { render, screen, fireEvent, waitFor } from '@/__tests__/utils/testUtils';
 import userEvent from '@testing-library/user-event';
 import ContactModal from '@/components/ui/ContactModal';
-import { mockContactFormData, mockWebhookResponse, mockLeadId } from '@/__tests__/utils/mockData';
+import { mockContactFormData, mockWebhookResponse, mockLeadId, mockProductId } from '@/__tests__/utils/mockData';
 
 // Mock @calcom/embed-react
 vi.mock('@calcom/embed-react', () => ({
@@ -309,7 +309,7 @@ describe('ContactModal', () => {
       });
     });
 
-    it('passes lead_id from webhook response to Cal.com', async () => {
+    it('passes lead_id and product_id from webhook response to Cal.com', async () => {
       const user = userEvent.setup();
       const { fetchWithTimeout } = await import('@/lib/fetchWithTimeout');
       const { getCalApi } = await import('@calcom/embed-react');
@@ -334,6 +334,7 @@ describe('ContactModal', () => {
           calLink: 'simpliflow-office-e6a9co/leadflow',
           config: expect.objectContaining({
             lead_id: mockLeadId,
+            product_id: mockProductId,
           }),
         }));
       });
