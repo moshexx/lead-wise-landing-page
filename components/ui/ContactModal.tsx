@@ -1,9 +1,10 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
-import { useTranslations } from 'next-intl';
-import { X, Phone, Mail, User, Loader2 } from 'lucide-react';
+import { useTranslations, useLocale } from 'next-intl';
+import { useRouter } from 'next/navigation';
+import { X, Phone, Mail, User, Loader2, CheckCircle, Calendar } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { getCalApi } from '@calcom/embed-react';
 import { WEBHOOK_URL } from '@/lib/constants';
@@ -23,10 +24,30 @@ interface ContactModalProps {
 
 export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
   const t = useTranslations('contactForm');
+  const tBooking = useTranslations('bookingSuccess');
+  const router = useRouter();
+  const locale = useLocale();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [currentStep, setCurrentStep] = useState(1);
+  const [bookingComplete, setBookingComplete] = useState(false);
+  const [savedLeadId, setSavedLeadId] = useState<string | null>(null);
   const totalSteps = 3;
+
+  // Set up Cal.com event listener for booking success
+  useEffect(() => {
+    const setupCalListener = async () => {
+      const cal = await getCalApi();
+      cal('on', {
+        action: 'bookingSuccessfulV2',
+        callback: () => {
+          setBookingComplete(true);
+        }
+      });
+    };
+
+    setupCalListener();
+  }, []);
 
   const {
     register,
@@ -87,6 +108,9 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
       const leadId = responseData.lead_id || responseData.fields?.rec_id || responseData.id;
       const productId = responseData.product_id || responseData.fields?.['Product Record Id']?.[0];
 
+      // Save lead_id for later redirect
+      setSavedLeadId(leadId);
+
       // Open Cal.com booking modal with pre-filled data
       const cal = await getCalApi();
       cal('modal', {
@@ -102,10 +126,9 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
         }
       });
 
-      // Reset form and close modal
+      // Reset form (but don't close modal yet - wait for booking success)
       reset();
       setCurrentStep(1);
-      onClose();
     } catch (err) {
       logger.error('Error submitting form:', err);
       setError(t('error'));
@@ -118,7 +141,16 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
     reset();
     setCurrentStep(1);
     setError(null);
+    setBookingComplete(false);
+    setSavedLeadId(null);
     onClose();
+  };
+
+  const handleContinueToForm = () => {
+    if (savedLeadId) {
+      router.push(`/${locale}/thank-you?lead_id=${savedLeadId}`);
+    }
+    handleModalClose();
   };
 
   // Animation variants for step transitions
@@ -169,27 +201,55 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                 <X className="w-5 h-5 text-gray-500" />
               </button>
 
-              {/* Progress Bar */}
-              <div className="mb-6 mt-8">
-                <div className="flex justify-between items-center mb-2">
-                  <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
-                    {t('title')}
+              {/* Booking Success View */}
+              {bookingComplete ? (
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  className="text-center py-8"
+                >
+                  <div className="flex justify-center mb-6">
+                    <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center">
+                      <CheckCircle className="w-12 h-12 text-green-600" />
+                    </div>
+                  </div>
+                  <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+                    {tBooking('title')}
                   </h2>
-                  <span className="text-sm text-gray-500">
-                    {t('stepProgress', { current: currentStep, total: totalSteps })}
-                  </span>
-                </div>
-                <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
-                  <motion.div
-                    className="h-full bg-primary"
-                    initial={{ width: '33.33%' }}
-                    animate={{ width: `${(currentStep / totalSteps) * 100}%` }}
-                    transition={{ duration: 0.3 }}
-                  />
-                </div>
-              </div>
+                  <div className="flex items-center justify-center gap-2 text-gray-600 mb-6">
+                    <Calendar className="w-5 h-5" />
+                    <p>{tBooking('reminder')}</p>
+                  </div>
+                  <button
+                    onClick={handleContinueToForm}
+                    className="w-full bg-primary text-white font-bold py-4 px-6 rounded-xl hover:bg-primary-dark transition-all transform hover:scale-[1.02]"
+                  >
+                    {tBooking('continueButton')}
+                  </button>
+                </motion.div>
+              ) : (
+                <>
+                  {/* Progress Bar */}
+                  <div className="mb-6 mt-8">
+                    <div className="flex justify-between items-center mb-2">
+                      <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
+                        {t('title')}
+                      </h2>
+                      <span className="text-sm text-gray-500">
+                        {t('stepProgress', { current: currentStep, total: totalSteps })}
+                      </span>
+                    </div>
+                    <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
+                      <motion.div
+                        className="h-full bg-primary"
+                        initial={{ width: '33.33%' }}
+                        animate={{ width: `${(currentStep / totalSteps) * 100}%` }}
+                        transition={{ duration: 0.3 }}
+                      />
+                    </div>
+                  </div>
 
-              {/* Form */}
+                  {/* Form */}
               <form onSubmit={handleSubmit(onSubmit)} className="relative min-h-[280px]">
                 <AnimatePresence mode="wait" custom={currentStep}>
                   {/* Step 1: Name */}
@@ -438,6 +498,8 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                   {t('privacyNotice')}
                 </motion.p>
               </form>
+                </>
+              )}
             </div>
           </motion.div>
         </>

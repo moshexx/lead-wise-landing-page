@@ -340,7 +340,7 @@ describe('ContactModal', () => {
       });
     });
 
-    it('closes modal after successful submission', async () => {
+    it('keeps modal open after successful submission (for booking flow)', async () => {
       const user = userEvent.setup();
       const { fetchWithTimeout } = await import('@/lib/fetchWithTimeout');
       (fetchWithTimeout as ReturnType<typeof vi.fn>).mockResolvedValue(mockWebhookResponse);
@@ -357,8 +357,9 @@ describe('ContactModal', () => {
       await user.type(screen.getByPlaceholderText('placeholders.phone'), mockContactFormData.phone);
       await user.click(screen.getByText('submit'));
 
+      // Modal should NOT close immediately - it stays open for Cal.com booking flow
       await waitFor(() => {
-        expect(mockOnClose).toHaveBeenCalled();
+        expect(mockOnClose).not.toHaveBeenCalled();
       });
     });
   });

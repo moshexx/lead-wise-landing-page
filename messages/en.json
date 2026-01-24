@@ -433,6 +433,15 @@
       "methods": "Email, WhatsApp, or through the contact form on our website."
     }
   },
+  "bookingSuccess": {
+    "title": "Meeting Scheduled Successfully!",
+    "reminder": "Make sure to add the meeting to your calendar",
+    "continueButton": "Continue to Preparation Form"
+  },
+  "thankYou": {
+    "title": "Thank You!",
+    "subtitle": "Please fill out the short form below so we can prepare for our meeting"
+  },
   "faq": {
     "title": "Frequently Asked Questions",
     "subtitle": "Everything you wanted to know about LeadWise",
