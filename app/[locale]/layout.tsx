@@ -17,6 +17,11 @@ export async function generateMetadata({ params }: { params: { locale: string } 
   return {
     title: messages.site.title,
     description: messages.site.description,
+    icons: {
+      icon: '/favicon.ico',
+      shortcut: '/favicon.ico',
+      apple: '/favicon.ico',
+    },
     openGraph: {
       title: messages.site.title,
       description: messages.site.description,
