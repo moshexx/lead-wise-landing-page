@@ -205,6 +205,7 @@
       "Month of technical support (we've got your back)"
     ],
     "payment": "Pay in full: $799 or 3 payments of $285",
+    "disclaimer": "*Does not include third-party provider costs (CRM, automations, WhatsApp, and private domain) - approx. $20-40/month, depending on usage",
     "social": "Join consultants and service providers already doubling their meetings with the system",
     "cta": "Schedule Your Free Strategy Session"
   },
@@ -456,7 +457,7 @@
       },
       {
         "question": "Is there a monthly cost?",
-        "answer": "The initial investment is a one-time payment of $799. After that, there's a small monthly fee for technical tools (around $50-80/month) - depending on usage volume."
+        "answer": "The initial investment is a one-time payment of $799. After that, there's a monthly cost of approximately $20-40 for third-party technical tools: CRM system for lead management, automation tools, WhatsApp messaging, and your own private domain. The exact cost depends on your usage volume and chosen plan."
       },
       {
         "question": "Is the system suitable for any type of business?",

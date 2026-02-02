@@ -105,6 +105,7 @@ export default function PricingSection() {
               </h2>
               <p className="text-lg opacity-90">{t('subtitle')}</p>
               <p className="text-xl mt-4 font-semibold">{t('payment')}</p>
+              <p className="text-xs opacity-75 mt-2 italic">{t('disclaimer')}</p>
             </div>
 
             {/* Value Comparison */}
