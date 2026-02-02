@@ -42,7 +42,7 @@ export default function ProcessStep({
         <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white">
           {title}
         </h3>
-        <p className="text-gray-600 dark:text-gray-300 max-w-xs">
+        <p className="text-gray-900 dark:text-gray-300 max-w-xs">
           {description}
         </p>
       </div>

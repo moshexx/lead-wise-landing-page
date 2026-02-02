@@ -7,8 +7,8 @@
     "cta": "Schedule Your Free Strategy Session"
   },
   "hero": {
-    "title": "Turn Every Lead Into a Booked Meeting",
-    "subtitle": "Instant WhatsApp response + Smart follow-up + Automatic calendar sync",
+    "title": "The Shortest Path from Hot Lead to Booked Meeting",
+    "subtitle": "No WhatsApp ping-pong, no no-shows. Smart system that responds in seconds, warms up the client, and sends reminders until they show up. Everything works automatically, in real-time.",
     "cta": "Schedule Your Free Strategy Session"
   },
   "problem": {
@@ -18,16 +18,16 @@
     "familiar": "Sound familiar?",
     "painPoints": [
       {
-        "title": "Slow Response Time",
-        "description": "Leads leave their details - and by the time you get back to them, they don't remember who you are or why they reached out."
+        "title": "Unable to Follow Up with Leads in Time",
+        "description": "The lead left their details, but by the time you got back to them, they've already forgotten who you are or why they reached out - or they've already closed with a competitor. Following up within an hour increases conversion chances by 500%."
       },
       {
-        "title": "No-Shows to Meetings",
-        "description": "Leads schedule a meeting, but on the day itself they simply don't show up."
+        "title": "Leads No-Show to Meetings or Calls",
+        "description": "You set a time, cleared your calendar, but the other side simply doesn't show up or answer. Proper reminders and warming reduce no-show rates by 30%."
       },
       {
-        "title": "Scheduling Chaos",
-        "description": "Scheduling meetings becomes a ping-pong of messages at inconvenient times, without clear closure."
+        "title": "Endless WhatsApp Ping-Pong to Schedule a Meeting",
+        "description": "Hours wasted on exhausting coordination attempts that end with \"let's talk later\". Since 80% of deals close only from the fifth contact onward, most of your money is simply falling through the cracks."
       }
     ]
   },
@@ -37,40 +37,40 @@
     "benefits": [
       {
         "title": "Instant WhatsApp Response",
-        "description": "Every lead gets an automatic response within seconds"
+        "description": "Catch the lead while they're \"hot\" - the system sends a personal message the second their details are submitted - exactly when the customer is most interested and focused on finding a solution. We lock in the connection immediately and direct them straight to booking a meeting."
       },
       {
-        "title": "Smart, Non-Pushy Follow-up",
-        "description": "Automatic reminders that arrive at the right time"
+        "title": "Automatic Meeting Scheduling",
+        "description": "End the era of ping-pong with \"when's good for you?\" messages. The lead chooses their own time slot in your calendar from a link sent automatically, saving you hours of chasing and coordinating"
       },
       {
-        "title": "Calendar Sync + Automatic Reminders",
-        "description": "Every meeting synced with automatic reminders"
+        "title": "Reminders and Warming",
+        "description": "Ensuring they actually show up - once a meeting is booked, the system sends a series of reminders and value (like a short video) that create commitment in the customer and reduce no-show rates by 30%."
       },
       {
-        "title": "Full Data Control",
-        "description": "Clear dashboard with all the information you need"
+        "title": "Smart Follow-up",
+        "description": "Consistency until full maturity - the system manages the connection for you with varied messages that keep you top of mind. We ensure every lead reaches the sales stage, without you having to chase them manually."
       }
     ]
   },
   "howItWorks": {
     "title": "How does it work?",
-    "subtitle": "Simple three-step process",
+    "subtitle": "Automatic mechanism that takes care of the lead from registration to the meeting",
     "steps": [
       {
         "number": "1",
-        "title": "Lead Signs Up",
-        "description": "Instant WhatsApp sent automatically"
+        "title": "Lead Signs Up - The Machine Kicks In",
+        "description": "The moment details are submitted, a personal WhatsApp message is sent within seconds. We catch them while they're \"hot\" and offer them to book a meeting immediately in your calendar."
       },
       {
         "number": "2",
-        "title": "Didn't Book a Meeting?",
-        "description": "Smart reminders go out automatically"
+        "title": "Didn't Book? We Don't Give Up",
+        "description": "This is where most deals fall through, but not with us. The system identifies who didn't book and starts a series of smart follow-up messages that provide value and remind them why they reached out - until they're ready to book."
       },
       {
         "number": "3",
-        "title": "Booked a Meeting?",
-        "description": "Gets confirmation + reminder. Everything synced"
+        "title": "Booked a Meeting? We Make Sure They Show Up",
+        "description": "Once a time is booked in the calendar, the lead gets confirmation and a series of automatic reminders. They arrive at the meeting already knowing you, understanding your value, and ready to talk business."
       }
     ]
   },
@@ -109,31 +109,58 @@
     "subtitle": "They're already using the system. Now it's your turn.",
     "testimonials": [
       {
-        "name": "Yossi C.",
-        "title": "Founder",
-        "business": "Digital Marketing Agency (12-person team)",
-        "quote": "Before LeadWise, we were losing 60% of our leads to slow response times. Now every lead gets instant attention, and our show-up rate jumped from 45% to 72%.",
-        "result": "27% increase in meeting attendance rate",
-        "metric": "From 45% to 72% show-up rate",
-        "timeframe": "Within 30 days"
+        "name": "David",
+        "title": "Mortgage Advisor",
+        "business": "",
+        "quote": "This was the smartest move I made for my business. I went from 8 meetings a month to 16 meetings without adding a dollar to marketing. Same lead volume, simply 2x conversion. I even managed to cut my advertising budget by $400/month because my calendar just filled up.",
+        "result": "Doubled meeting count + reduced marketing budget",
+        "metric": "From 8 to 16 meetings + saving $400/month",
+        "timeframe": "Within two months"
       },
       {
-        "name": "Sarah L.",
-        "title": "Business Consultant",
-        "business": "Strategic Business Consulting",
-        "quote": "It just works. I'm no longer chasing leads - the system does it for me. Saved 10 hours a week and I'm closing more deals.",
+        "name": "Shir",
+        "title": "Mental Health Therapist",
+        "business": "",
+        "quote": "I was wasting at least 10 hours a week just on messages and trying to catch leads between therapy sessions. Today everything happens on its own - clients book themselves, and I just open my calendar in the morning and see new meetings that closed without me even talking to them.",
         "result": "Saved 10 hours weekly",
         "metric": "40 hours/month back to client work",
-        "timeframe": "From week one"
+        "timeframe": "From the first week"
       },
       {
-        "name": "David M.",
-        "title": "CEO",
-        "business": "Mortgage Consulting Office",
-        "quote": "Best thing I've done for my business. Before - 8 meetings/month. After - 16 meetings. Same lead volume, 2x conversion.",
-        "result": "Doubled monthly meeting count",
-        "metric": "From 8 to 16 meetings/month",
-        "timeframe": "Within two months"
+        "name": "Tomer",
+        "title": "Insurance Agent",
+        "business": "",
+        "quote": "I used to get back to leads only at the end of the day, when half of them no longer remembered who I was. Today they get a message within 10 seconds. My scheduling rate jumped 40% just because they get a response while they're still at their screen and actually need me.",
+        "result": "40% increase in scheduling rate",
+        "metric": "Response within 10 seconds instead of end of day",
+        "timeframe": "Immediate"
+      },
+      {
+        "name": "Michal",
+        "title": "Parenting Coach",
+        "business": "",
+        "quote": "Beyond saving 8 hours weekly of exhausting coordination, clients arrive after they've seen my explainer video that was sent to them automatically. They come to the meeting already understanding how I work, which shortened my sales calls by at least 15 minutes.",
+        "result": "Saved 8 hours weekly + shorter calls",
+        "metric": "8 hours/week + 15 minutes per call",
+        "timeframe": "From the first week"
+      },
+      {
+        "name": "Yaniv",
+        "title": "Personal Trainer",
+        "business": "",
+        "quote": "I had at least 1-2 no-shows a week from people who simply forgot we had scheduled, and that's calendar time no one pays for. Since I added the automatic reminders, almost everyone shows up. This saved me about $400/month in dead time that became working hours.",
+        "result": "Dramatic decrease in no-shows",
+        "metric": "Saving $400/month in dead time",
+        "timeframe": "From the first month"
+      },
+      {
+        "name": "Sarah",
+        "title": "Business Consultant",
+        "business": "Strategic Business Consulting",
+        "quote": "The system simply does the dirty work for me. This month I closed 2 deals from leads who contacted me two weeks ago and I completely forgot about them. The automatic follow-up kept me top of mind exactly when they were ready, and they came back to me ready to close.",
+        "result": "Closed deals from leads that almost slipped away",
+        "metric": "2 deals from 2-week-old leads",
+        "timeframe": "Within a month"
       }
     ]
   },
@@ -183,7 +210,7 @@
       "label": "Offer ends in"
     },
     "urgency": {
-      "slotsRemaining": "Only {count} setup slots remaining this month",
+      "slotsRemaining": "As of {month}, we only have {count} spots left for new clients",
       "bonusEnding": "Bonus ends {date}",
       "daysRemaining": "{count} days left",
       "limitedCapacity": "We limit onboarding to ensure quality for every client"
@@ -208,6 +235,14 @@
     "disclaimer": "*Does not include third-party provider costs (CRM, automations, WhatsApp, and private domain) - approx. $20-40/month, depending on usage",
     "social": "Join consultants and service providers already doubling their meetings with the system",
     "cta": "Schedule Your Free Strategy Session"
+  },
+  "availability": {
+    "title": "We Build Your System From Scratch",
+    "paragraph1": "To ensure your machine works perfectly, we don't just \"give you access\" - we build and customize all automation to your business's exact needs.",
+    "paragraph2": "Because of the personal setup process and dedicated support we provide each client, the number of projects we take each month is limited.",
+    "statusDate": "As of {month} {year}",
+    "statusSpots": "Only {count} spots remaining for new clients",
+    "cta": "Schedule Free Strategy Session"
   },
   "riskReversal": {
     "title": "Important Clarification",

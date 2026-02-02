@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 export default function SocialProofSection() {
   const t = useTranslations('socialProof');
 
-  const testimonialKeys = [0, 1, 2];
+  const testimonialKeys = [0, 1, 2, 3, 4, 5];
 
   return (
     <section className="py-16 md:py-24 bg-gray-50">
@@ -28,7 +28,7 @@ export default function SocialProofSection() {
           </motion.div>
 
           {/* Testimonials Grid */}
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {testimonialKeys.map((key, index) => (
               <motion.div
                 key={key}

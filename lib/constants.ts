@@ -48,8 +48,44 @@ export const ROI_DEFAULTS = {
 export const URGENCY = {
   enabled: true,                    // Set to false to disable all urgency elements
   monthlySlotsTotal: 10,            // Total onboarding slots per month
-  monthlySlotsUsed: 7,              // How many slots are already taken
-  bonusDeadline: '2026-01-31',      // Early bird bonus deadline (YYYY-MM-DD)
+  bonusDeadline: '2026-02-28',      // Early bird bonus deadline (YYYY-MM-DD)
   showRecentSignups: false,         // Show "X just signed up" notifications (only if real)
   timerHoursFromNow: 72,            // Timer shows this many hours from when the user visits (72 = 3 days)
+};
+
+// Dynamic function to calculate how many slots are used based on the day of the month
+export const getDynamicSlotsUsed = (): number => {
+  const now = new Date();
+  const dayOfMonth = now.getDate();
+  const lastDayOfMonth = new Date(now.getFullYear(), now.getMonth() + 1, 0).getDate();
+
+  // Calculate month progress (0-1)
+  const monthProgress = dayOfMonth / lastDayOfMonth;
+
+  // Beginning of month (days 1-5): 2-3 slots used (8-7 remaining)
+  // Mid-month (days 10-15): 4-5 slots used (6-5 remaining)
+  // End of month (days 20-30): 6-8 slots used (4-2 remaining)
+
+  if (monthProgress < 0.15) {
+    // Days 1-4/5 of the month
+    return 2;
+  } else if (monthProgress < 0.35) {
+    // Days 5-10 of the month
+    return 3;
+  } else if (monthProgress < 0.5) {
+    // Days 11-15 of the month
+    return 4;
+  } else if (monthProgress < 0.65) {
+    // Days 16-19 of the month
+    return 5;
+  } else if (monthProgress < 0.8) {
+    // Days 20-24 of the month
+    return 6;
+  } else if (monthProgress < 0.9) {
+    // Days 25-27 of the month
+    return 7;
+  } else {
+    // Days 28-end of month
+    return 8;
+  }
 };

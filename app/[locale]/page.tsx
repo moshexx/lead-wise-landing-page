@@ -6,6 +6,7 @@ import HowItWorksSection from '@/components/sections/HowItWorksSection';
 import WhatYouGetSection from '@/components/sections/WhatYouGetSection';
 import SocialProofSection from '@/components/sections/SocialProofSection';
 import ROICalculatorSection from '@/components/sections/ROICalculatorSection';
+import AvailabilitySection from '@/components/sections/AvailabilitySection';
 import PricingSection from '@/components/sections/PricingSection';
 import RiskReversalSection from '@/components/sections/RiskReversalSection';
 import FAQSection from '@/components/sections/FAQSection';
@@ -31,6 +32,7 @@ export default function HomePage({ params }: { params: { locale: string } }) {
       <WhatYouGetSection />
       <SocialProofSection />
       <ROICalculatorSection />
+      <AvailabilitySection />
       <PricingSection />
       <RiskReversalSection />
       <FAQSection />

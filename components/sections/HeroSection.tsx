@@ -2,7 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import BookDemoButton from '@/components/ui/BookDemoButton';
-import LanguageToggle from '@/components/ui/LanguageToggle';
+import WhatsAppButton from '@/components/ui/LanguageToggle';
 import VideoPlayer from '@/components/ui/VideoPlayer';
 import Logo from '@/components/ui/Logo';
 import { motion } from 'framer-motion';
@@ -29,9 +29,9 @@ export default function HeroSection() {
         </motion.div>
       </div>
 
-      {/* Language Toggle - Top Right */}
-      <div className="absolute top-6 end-6 z-20">
-        <LanguageToggle />
+      {/* WhatsApp Button - Top Right */}
+      <div className="absolute top-4 end-4 sm:top-6 sm:end-6 z-20">
+        <WhatsAppButton />
       </div>
 
       {/* Content */}
