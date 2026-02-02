@@ -3,7 +3,7 @@
 import { useTranslations, useLocale } from 'next-intl';
 import BookDemoButton from '@/components/ui/BookDemoButton';
 import CountdownTimer from '@/components/ui/CountdownTimer';
-import { Check, Gift, Clock, Users, TrendingDown } from 'lucide-react';
+import { Check, Gift, Clock, TrendingDown } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { PRICE_ILS, PRICE_USD, URGENCY, getDynamicSlotsUsed } from '@/lib/constants';
 
@@ -24,11 +24,6 @@ export default function PricingSection() {
   const formattedDeadline = locale === 'he'
     ? bonusDeadline.toLocaleDateString('he-IL', { day: 'numeric', month: 'long' })
     : bonusDeadline.toLocaleDateString('en-US', { month: 'long', day: 'numeric' });
-
-  // Dynamic current month
-  const currentMonth = locale === 'he'
-    ? new Date().toLocaleDateString('he-IL', { month: 'long' })
-    : new Date().toLocaleDateString('en-US', { month: 'long' });
 
   // Calculate dynamic timer deadline (end of current month at 23:59:59)
   // Using local timezone consistently for accurate countdown
@@ -67,32 +62,17 @@ export default function PricingSection() {
               {t('bonus')}
             </div>
 
-            {/* Urgency indicators */}
-            {URGENCY.enabled && (
-              <div className="flex flex-wrap items-center justify-center gap-3 text-sm">
-                {slotsRemaining > 0 && (
-                  <motion.div
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    className="bg-yellow-400 px-4 py-2 rounded-lg flex items-center gap-2 text-lg md:text-xl font-bold text-gray-900 shadow-lg"
-                  >
-                    <Users className="w-5 h-5" />
-                    {t('urgency.slotsRemaining', { count: slotsRemaining, month: currentMonth })}
-                  </motion.div>
-                )}
-                {daysRemaining > 0 && daysRemaining <= 30 && (
-                  <motion.div
-                    initial={{ opacity: 0, x: 20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-lg flex items-center gap-2"
-                  >
-                    <Clock className="w-4 h-4" />
-                    {t('urgency.bonusEnding', { date: formattedDeadline })} • {t('urgency.daysRemaining', { count: daysRemaining })}
-                  </motion.div>
-                )}
-              </div>
+            {/* Urgency indicators - Timer only */}
+            {URGENCY.enabled && daysRemaining > 0 && daysRemaining <= 30 && (
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-lg flex items-center gap-2 text-sm"
+              >
+                <Clock className="w-4 h-4" />
+                {t('urgency.bonusEnding', { date: formattedDeadline })} • {t('urgency.daysRemaining', { count: daysRemaining })}
+              </motion.div>
             )}
           </motion.div>
 
