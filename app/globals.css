@@ -22,6 +22,7 @@
 }
 
 @layer utilities {
+
   /* RTL utilities */
   .start-0 {
     inset-inline-start: 0;
@@ -67,4 +68,21 @@
   .bg-gradient-to-e {
     background-image: linear-gradient(to inline-end, var(--tw-gradient-stops));
   }
+}
+
+/* Accessibility Features */
+.high-contrast {
+  filter: contrast(125%);
+}
+
+.high-contrast img,
+.high-contrast video {
+  filter: contrast(100%);
+}
+
+.font-readable body {
+  font-family: Arial, Helvetica, sans-serif !important;
+  letter-spacing: 0.05em;
+  word-spacing: 0.1em;
+  line-height: 1.5;
 }

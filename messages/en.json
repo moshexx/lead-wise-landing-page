@@ -514,22 +514,22 @@
         "question": "I have more questions, how do I contact you?",
         "answer": "The easiest way - click the 'Schedule Your Free Strategy Session' button and let's schedule a short call. We'll answer all questions and check together if the system fits you."
       }
-    ],
-    "cookies": {
-      "title": "We use cookies",
-      "description": "We use cookies to improve your experience. By using our site, you agree to our use of cookies.",
-      "accept": "Accept All",
-      "decline": "Decline"
-    },
-    "accessibility": {
-      "title": "Accessibility Tools",
-      "reset": "Reset Settings",
-      "textSize": "Text Size",
-      "highContrast": "High Contrast",
-      "grayscale": "Grayscale",
-      "readableFont": "Readable Font",
-      "close": "Close Accessibility Menu",
-      "open": "Open Accessibility Menu"
-    }
+    ]
+  },
+  "cookies": {
+    "title": "We use cookies",
+    "description": "We use cookies to improve your experience. By using our site, you agree to our use of cookies.",
+    "accept": "Accept All",
+    "decline": "Decline"
+  },
+  "accessibility": {
+    "title": "Accessibility Tools",
+    "reset": "Reset Settings",
+    "textSize": "Text Size",
+    "highContrast": "High Contrast",
+    "grayscale": "Grayscale",
+    "readableFont": "Readable Font",
+    "close": "Close Accessibility Menu",
+    "open": "Open Accessibility Menu"
   }
 }

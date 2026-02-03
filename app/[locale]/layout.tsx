@@ -4,6 +4,9 @@ import { notFound } from 'next/navigation';
 import { locales } from '@/i18n';
 import '@/app/globals.css';
 
+import CookieConsent from '@/components/ui/CookieConsent';
+import AccessibilityWidget from '@/components/ui/AccessibilityWidget';
+
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
@@ -59,6 +62,8 @@ export default async function LocaleLayout({
       <body>
         <NextIntlClientProvider messages={messages}>
           {children}
+          <CookieConsent />
+          <AccessibilityWidget />
         </NextIntlClientProvider>
       </body>
     </html>
