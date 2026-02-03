@@ -39,10 +39,10 @@ export default function ProcessStep({
 
       {/* Content */}
       <div className="mt-4 space-y-2">
-        <h3 className="text-xl md:text-2xl font-bold dark:text-white" style={{ color: '#000000' }}>
+        <h3 className="text-xl md:text-2xl font-bold text-black dark:text-white">
           {title}
         </h3>
-        <p className="dark:text-gray-300 max-w-xs" style={{ color: '#000000' }}>
+        <p className="text-black dark:text-gray-300 max-w-xs">
           {description}
         </p>
       </div>

@@ -27,10 +27,10 @@ export default function HowItWorksSection() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4" style={{ color: '#000000' }}>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-4">
               {t('title')}
             </h2>
-            <p className="text-xl" style={{ color: '#000000' }}>{t('subtitle')}</p>
+            <p className="text-xl text-black">{t('subtitle')}</p>
           </motion.div>
 
           {/* Steps */}
