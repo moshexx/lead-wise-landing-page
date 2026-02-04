@@ -87,7 +87,7 @@ export default function PricingSection() {
             {/* Price Header */}
             <div className="bg-primary text-white p-8 text-center">
               <h2 className="text-2xl md:text-3xl font-bold mb-2">
-                {t('title').replace('2,930 ₪', `${price} ${currency}`).replace('$799', `${currency}${price}`)}
+                {t('title').replace('4,920 ₪', `${price} ${currency}`).replace('$799', `${currency}${price}`)}
               </h2>
               <p className="text-lg opacity-90">{t('subtitle')}</p>
               <p className="text-xl mt-4 font-semibold">{t('payment')}</p>

@@ -8,7 +8,7 @@ export const WEBHOOK_URL = 'https://n8n.simpliflow.me/webhook/c850324e-a33a-4c53
 export const DEMO_VIDEO_URL = 'https://youtube.com/shorts/CP2oHQsYhiE';
 
 // Pricing
-export const PRICE_ILS = '2,930';
+export const PRICE_ILS = '4,920';
 export const PRICE_USD = '799';
 
 // Contact information
